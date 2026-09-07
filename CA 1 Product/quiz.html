@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive E-Waste Quiz, E-Waste Responsibility Self-Check and the 5-Day E-Waste Challenge. Test your knowledge and track your progress.">
+    <title>Interactive Quiz &amp; Tools | E-Waste 360°</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="quiz">
+
+    <div id="navRoot"></div>
+
+    <main class="page-content">
+
+        <!-- ============ QUIZ ============ -->
+        <section class="section" id="quiz-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag"><i class="fa-solid fa-gamepad"></i> Test Yourself</span>
+                    <h2 class="section-title">E-Waste Knowledge Quiz</h2>
+                    <p class="section-desc">10 questions, one at a time, with instant feedback and full explanations. Answer carefully &mdash; questions shuffle on every attempt.</p>
+                </div>
+
+                <div class="quiz-wrap reveal">
+                    <div class="panel" id="quizApp">
+
+                        <!-- Start screen -->
+                        <div id="quizStart" class="quiz-start">
+                            <div class="quiz-start-icon"><i class="fa-solid fa-brain"></i></div>
+                            <h3>Ready to Test Yourself?</h3>
+                            <p>Answer 10 questions about e-waste, recycling, EPR and sustainable electronics.</p>
+                            <div class="quiz-rules">
+                                <span class="quiz-rule"><i class="fa-solid fa-face-smile"></i> Instant feedback</span>
+                                <span class="quiz-rule"><i class="fa-solid fa-arrows-rotate"></i> Questions reshuffle</span>
+                                <span class="quiz-rule"><i class="fa-solid fa-trophy"></i> Best score saved</span>
+                            </div>
+                            <button class="btn btn-primary" id="quizStartBtn"><i class="fa-solid fa-play btn-icon"></i> Start Quiz</button>
+                        </div>
+
+                        <!-- In-question screen -->
+                        <div id="quizAsk" hidden>
+                            <div class="quiz-head">
+                                <span class="quiz-counter" id="quizCounter"></span>
+                                <span class="quiz-timer" id="quizTimer"><i class="fa-solid fa-stopwatch"></i> 00:00</span>
+                            </div>
+                            <div class="quiz-progressbar"><div class="quiz-progress-fill" id="quizProgressFill"></div></div>
+                            <div class="quiz-steps" id="quizSteps"></div>
+                            <div class="quiz-card" id="quizCard"></div>
+                            <div class="quiz-nav">
+                                <button class="btn btn-ghost btn-sm" id="quizBackBtn" disabled><i class="fa-solid fa-arrow-left"></i> Back</button>
+                                <button class="btn btn-primary btn-sm" id="quizNextBtn" disabled>Next <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                            <p class="quiz-hint" id="quizHint"></p>
+                        </div>
+
+                        <!-- Results screen -->
+                        <div id="quizResultPanel" hidden class="quiz-results">
+                            <div class="quiz-ring" id="quizRing"><span id="quizPct">0</span><small id="quizPctLabel">%</small></div>
+                            <h3 class="quiz-result-title" id="quizResultTitle"></h3>
+                            <p class="quiz-result-msg" id="quizResultMsg"></p>
+                            <div class="quiz-stats">
+                                <div class="quiz-stat good"><b id="quizStatCorrect">0</b><span>Correct</span></div>
+                                <div class="quiz-stat bad"><b id="quizStatWrong">0</b><span>Wrong</span></div>
+                            </div>
+                            <p class="quiz-best" id="quizBest"></p>
+                            <button class="btn btn-primary" id="quizRetakeBtn"><i class="fa-solid fa-arrows-rotate btn-icon"></i> Retake Quiz</button>
+                            <div class="quiz-review" id="quizReview"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SELF-CHECK ============ -->
+        <section class="section alt" id="selfcheck">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag"><i class="fa-solid fa-gauge-high"></i> Interactive Tool</span>
+                    <h2 class="section-title">How E-Waste Responsible Are You?</h2>
+                    <p class="section-desc">Answer a few questions to get your <strong>E-Waste Responsibility Score</strong>. Educational, not a scientific test.</p>
+                </div>
+
+                <div class="quiz-wrap reveal">
+                    <div class="panel" id="selfCheckBox">
+                        <div id="selfCheckQuestions"></div>
+                        <button class="btn btn-primary btn-full" id="selfCheckBtn"><i class="fa-solid fa-calculator"></i> Calculate My Score</button>
+                    </div>
+                    <div class="panel self-check-result" id="selfCheckResult" hidden>
+                        <div class="result-ring" id="scRing"><span id="scScore">0</span></div>
+                        <h3 id="scTitle"></h3>
+                        <p id="scMsg"></p>
+                        <button class="btn btn-outline" id="scRetryBtn"><i class="fa-solid fa-rotate-left"></i> Try Again</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 5-DAY CHALLENGE ============ -->
+        <section class="section" id="challenge">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag"><i class="fa-solid fa-flag-checkered"></i> Gamification</span>
+                    <h2 class="section-title">Take the 5-Day E-Waste Challenge</h2>
+                    <p class="section-desc">A simple way to become more e-waste responsible. Check off each day's task and track your progress. Your progress is saved on this device.</p>
+                </div>
+
+                <div class="quiz-wrap reveal">
+                    <div class="panel challenge-box" id="challengeBox">
+                        <div class="challenge-progress">
+                            <p><span id="challengeDone">0</span> / 5 days completed</p>
+                            <div class="progress-track"><div class="progress-fill" id="challengeFill"></div></div>
+                        </div>
+                        <div class="challenge-list">
+                            <label class="challenge-item">
+                                <input type="checkbox" class="challenge-check" data-idx="0">
+                                <span class="challenge-checkbox"><i class="fa-solid fa-check"></i></span>
+                                <div class="challenge-text"><span class="challenge-day">Day 1</span><span class="challenge-task">Find unused electronics in your home</span></div>
+                            </label>
+                            <label class="challenge-item">
+                                <input type="checkbox" class="challenge-check" data-idx="1">
+                                <span class="challenge-checkbox"><i class="fa-solid fa-check"></i></span>
+                                <div class="challenge-text"><span class="challenge-day">Day 2</span><span class="challenge-task">Check whether something can be repaired</span></div>
+                            </label>
+                            <label class="challenge-item">
+                                <input type="checkbox" class="challenge-check" data-idx="2">
+                                <span class="challenge-checkbox"><i class="fa-solid fa-check"></i></span>
+                                <div class="challenge-text"><span class="challenge-day">Day 3</span><span class="challenge-task">Separate old batteries for safe disposal</span></div>
+                            </label>
+                            <label class="challenge-item">
+                                <input type="checkbox" class="challenge-check" data-idx="3">
+                                <span class="challenge-checkbox"><i class="fa-solid fa-check"></i></span>
+                                <div class="challenge-text"><span class="challenge-day">Day 4</span><span class="challenge-task">Donate or reuse a working device</span></div>
+                            </label>
+                            <label class="challenge-item">
+                                <input type="checkbox" class="challenge-check" data-idx="4">
+                                <span class="challenge-checkbox"><i class="fa-solid fa-check"></i></span>
+                                <div class="challenge-text"><span class="challenge-day">Day 5</span><span class="challenge-task">Learn about responsible recycling</span></div>
+                            </label>
+                        </div>
+                        <p class="challenge-note" id="challengeNote">Start the challenge and check off each day as you complete it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="pagerRoot"></div>
+    <div id="footerRoot"></div>
+    <div id="extrasRoot"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

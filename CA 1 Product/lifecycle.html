@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the e-waste lifecycle: raw materials, manufacturing, distribution, consumer use, repair, reuse, collection, recycling, material recovery and safe disposal.">
+    <title>E-Waste Lifecycle | E-Waste 360°</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="lifecycle">
+
+    <div id="navRoot"></div>
+
+    <main class="page-content">
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag"><i class="fa-solid fa-route"></i> Journey</span>
+                    <h2 class="section-title">The E-Waste Lifecycle</h2>
+                    <p class="section-desc">From raw materials to responsible disposal &mdash; explore every stage of an electronic product's journey. <strong>Click each stage</strong> for details.</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="tl-stage reveal" data-stage="0">
+                        <div class="tl-dot"><i class="fa-solid fa-mountain"></i></div>
+                        <div class="tl-content"><h3>Raw Materials</h3><p>Metals, plastics and rare earths are mined and processed.</p></div>
+                    </div>
+                    <div class="tl-stage reveal" data-stage="1">
+                        <div class="tl-dot"><i class="fa-solid fa-industry"></i></div>
+                        <div class="tl-content"><h3>Manufacturing</h3><p>Components are built and assembled into finished products.</p></div>
+                    </div>
+                    <div class="tl-stage reveal" data-stage="2">
+                        <div class="tl-dot"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div class="tl-content"><h3>Distribution</h3><p>Devices reach stores and consumers through supply chains.</p></div>
+                    </div>
+                    <div class="tl-stage reveal" data-stage="3">
+                        <div class="tl-dot"><i class="fa-solid fa-user"></i></div>
+                        <div class="tl-content"><h3>Consumer Use</h3><p>The product is used daily by consumers or businesses.</p></div>
+                    </div>
+                    <div class="tl-stage reveal" data-stage="4">
+                        <div class="tl-dot"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <div class="tl-content"><h3>Repair / Upgrade</h3><p>Devices are fixed or upgraded to extend their useful life.</p></div>
+                    </div>
+                    <div class="tl-stage reveal" data-stage="5">
+                        <div class="tl-dot"><i class="fa-solid fa-arrows-rotate"></i></div>
+                        <div class="tl-content"><h3>Reuse</h3><p>Working devices are donated, resold or repurposed.</p></div>
+                    </div>
+                    <div class="tl-stage reveal" data-stage="6">
+                        <div class="tl-dot"><i class="fa-solid fa-box"></i></div>
+                        <div class="tl-content"><h3>Collection</h3><p>Retired electronics are gathered through collection points.</p></div>
+                    </div>
+                    <div class="tl-stage reveal" data-stage="7">
+                        <div class="tl-dot"><i class="fa-solid fa-recycle"></i></div>
+                        <div class="tl-content"><h3>Recycling</h3><p>Devices are processed to reclaim materials and components.</p></div>
+                    </div>
+                    <div class="tl-stage reveal" data-stage="8">
+                        <div class="tl-dot"><i class="fa-solid fa-gem"></i></div>
+                        <div class="tl-content"><h3>Material Recovery</h3><p>Precious metals and reusable materials are extracted.</p></div>
+                    </div>
+                    <div class="tl-stage reveal" data-stage="9">
+                        <div class="tl-dot"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="tl-content"><h3>Safe Disposal</h3><p>Hazardous and non-recoverable residues are handled safely.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Lifecycle modal -->
+    <div class="modal" id="lifecycleModal">
+        <div class="modal-backdrop" onclick="window.closeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="window.closeModal()" aria-label="Close">&times;</button>
+            <div class="modal-icon" id="modalIcon"><i class="fa-solid fa-leaf"></i></div>
+            <h3 id="modalTitle"></h3>
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+    <div id="pagerRoot"></div>
+    <div id="footerRoot"></div>
+    <div id="extrasRoot"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

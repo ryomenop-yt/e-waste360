@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="E-Waste 360° - Understanding, Managing & Reducing E-Waste. An educational platform on E-Waste Management in the IT and Electronics Industry.">
+    <title>E-Waste 360° | Understanding, Managing & Reducing E-Waste</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+    <div id="navRoot"></div>
+
+    <main class="page-content">
+
+        <!-- ============ HERO ============ -->
+        <header class="hero">
+            <canvas id="particleCanvas"></canvas>
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fa-solid fa-leaf"></i> Environmental Awareness Platform</div>
+                <h1 class="hero-title">E-Waste <span class="gradient-text">360&deg;</span></h1>
+                <p class="hero-subtitle">Understanding, Managing &amp; Reducing E-Waste</p>
+                <p class="hero-desc">Every electronic device has a lifecycle. Learn how technology becomes waste, why it matters, and how responsible management can create a cleaner and more sustainable future.</p>
+                <div class="hero-buttons">
+                    <a href="e-waste.html" class="btn btn-primary"><i class="fa-solid fa-compass btn-icon"></i> Explore E-Waste</a>
+                    <a href="quiz.html" class="btn btn-outline"><i class="fa-solid fa-gamepad btn-icon"></i> Take the Quiz</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat tilt">
+                        <span class="hero-stat-num" data-target="62">0</span><span class="hero-stat-unit">M+ t</span>
+                        <p>E-waste generated worldwide in 2022 (UN Global E-waste Monitor)</p>
+                    </div>
+                    <div class="hero-stat tilt">
+                        <span class="hero-stat-num" data-target="22">0</span><span class="hero-stat-unit">%</span>
+                        <p>Of global e-waste documented as formally collected &amp; recycled</p>
+                    </div>
+                    <div class="hero-stat tilt">
+                        <span class="hero-stat-num" data-target="55">0</span><span class="hero-stat-unit">M+ t</span>
+                        <p>Recovered material value from e-waste each year (UNEP estimate)</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#principle" class="hero-scroll"><i class="fa-solid fa-chevron-down"></i></a>
+        </header>
+
+        <!-- ============ PRINCIPLE CARDS ============ -->
+        <section class="section" id="principle">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag"><i class="fa-solid fa-compass"></i> Start Here</span>
+                    <h2 class="section-title">Four Principles, One Mission</h2>
+                    <p class="section-desc">Every electronic device deserves a responsible life cycle</p>
+                </div>
+                <div class="card-grid info-grid">
+                    <div class="info-card tilt reveal">
+                        <div class="card-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+                        <h3>Reuse</h3>
+                        <p>Give electronic devices a second life instead of discarding them. Donate, resell or repurpose working electronics.</p>
+                    </div>
+                    <div class="info-card tilt reveal">
+                        <div class="card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <h3>Repair</h3>
+                        <p>Fix devices that can be repaired rather than instantly replacing them. A small repair can add years of life.</p>
+                    </div>
+                    <div class="info-card tilt reveal">
+                        <div class="card-icon"><i class="fa-solid fa-recycle"></i></div>
+                        <h3>Recycle</h3>
+                        <p>Send unusable electronics to responsible recycling channels so valuable materials can be recovered.</p>
+                    </div>
+                    <div class="info-card tilt reveal">
+                        <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
+                        <h3>Reduce</h3>
+                        <p>Reduce unnecessary electronic consumption at the source. Buy only what you truly need.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ EXPLORE JOURNEY ============ -->
+        <section class="section alt" id="journey">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag"><i class="fa-solid fa-route"></i> Explore</span>
+                    <h2 class="section-title">Explore the Full Journey</h2>
+                    <p class="section-desc">From how e-waste is created to how we can all act responsibly</p>
+                </div>
+                <div class="factors-grid">
+                    <a href="e-waste.html" class="factor-card tilt reveal">
+                        <div class="factor-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h3>E-Waste Basics</h3>
+                        <p>What counts as e-waste and why it is different from ordinary garbage.</p>
+                    </a>
+                    <a href="industry.html" class="factor-card tilt reveal">
+                        <div class="factor-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h3>IT &amp; Electronics Industry</h3>
+                        <p>How rapid upgrades and short lifecycles drive e-waste generation.</p>
+                    </a>
+                    <a href="lifecycle.html" class="factor-card tilt reveal">
+                        <div class="factor-icon"><i class="fa-solid fa-route"></i></div>
+                        <h3>The E-Waste Lifecycle</h3>
+                        <p>From raw materials to safe disposal &mdash; every stage of the journey.</p>
+                    </a>
+                    <a href="impact.html" class="factor-card tilt reveal">
+                        <div class="factor-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                        <h3>Environmental Impact</h3>
+                        <p>Soil, water and air pollution caused by improper e-waste dumping.</p>
+                    </a>
+                    <a href="india.html" class="factor-card tilt reveal">
+                        <div class="factor-icon"><i class="fa-solid fa-landmark"></i></div>
+                        <h3>E-Waste in India</h3>
+                        <p>Government, producers, consumers, recyclers &amp; Extended Producer Responsibility.</p>
+                    </a>
+                    <a href="business.html" class="factor-card tilt reveal">
+                        <div class="factor-icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <h3>Business Solutions</h3>
+                        <p>How companies design, reuse and recycle toward a circular economy.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TAKEAWAYS ============ -->
+        <section class="section" id="takeaways">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag"><i class="fa-solid fa-circle-check"></i> Key Takeaways</span>
+                    <h2 class="section-title">Remember These Four</h2>
+                </div>
+                <div class="takeaway-list">
+                    <div class="takeaway reveal"><span class="ta-icon"><i class="fa-solid fa-lightbulb"></i></span>Think Before You Replace.</div>
+                    <div class="takeaway reveal"><span class="ta-icon"><i class="fa-solid fa-wrench"></i></span>Repair Before You Discard.</div>
+                    <div class="takeaway reveal"><span class="ta-icon"><i class="fa-solid fa-arrow-rotate-left"></i></span>Reuse Before You Recycle.</div>
+                    <div class="takeaway reveal"><span class="ta-icon"><i class="fa-solid fa-recycle"></i></span>Recycle Before You Dispose.</div>
+                </div>
+                <div class="takeaway-final reveal">
+                    <p>&ldquo;Responsible e-waste management is not only the responsibility of recyclers. Consumers, businesses, manufacturers and governments all have a role.&rdquo;</p>
+                </div>
+                <div class="section-header reveal" style="margin-bottom:0;margin-top:56px">
+                    <div class="hero-buttons" style="justify-content:center">
+                        <a href="quiz.html" class="btn btn-primary"><i class="fa-solid fa-gamepad btn-icon"></i> Test Your Knowledge</a>
+                        <a href="about.html" class="btn btn-outline"><i class="fa-solid fa-users btn-icon"></i> Meet the Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="pagerRoot"></div>
+    <div id="footerRoot"></div>
+    <div id="extrasRoot"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
